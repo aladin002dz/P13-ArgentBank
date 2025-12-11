@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useGetProfileQuery, useUpdateProfileMutation } from '@/store/api/apiSlice';
 import { useAppDispatch } from '@/hooks/useRedux';
-import { setUser } from '@/store/slices/authSlice';
+import { setUser } from '@/store/slices/userSlice';
 import AccountCard from '@/components/AccountCard/AccountCard';
 import './Profile.css';
 

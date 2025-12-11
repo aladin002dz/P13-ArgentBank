@@ -1,15 +1,16 @@
 import { Link } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '@/hooks/useRedux';
-import { logout } from '@/store/slices/authSlice';
+import { logoutAndClearUser } from '@/store/slices/authSlice';
 import logo from '@/assets/argentBankLogo.png';
 import './Header.css';
 
 const Header = () => {
     const dispatch = useAppDispatch();
-    const { isAuthenticated, user } = useAppSelector((state) => state.auth);
+    const isAuthenticated = useAppSelector((state) => state.auth.isAuthenticated);
+    const user = useAppSelector((state) => state.user.user);
 
     const handleLogout = () => {
-        dispatch(logout());
+        dispatch(logoutAndClearUser());
     };
 
     return (

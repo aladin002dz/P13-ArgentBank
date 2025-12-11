@@ -26,7 +26,6 @@ const SignIn = () => {
             // Store token temporarily, then fetch profile
             dispatch(
                 setCredentials({
-                    user: { id: '', email, firstName: '', lastName: '' },
                     token: response.body.token,
                 })
             );
