@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { useAppDispatch, useAppSelector } from '../../hooks/useRedux';
-import { logout } from '../../store/slices/authSlice';
-import logo from '../../assets/argentBankLogo.png';
+import { useAppDispatch, useAppSelector } from '@/hooks/useRedux';
+import { logout } from '@/store/slices/authSlice';
+import logo from '@/assets/argentBankLogo.png';
 import './Header.css';
 
 const Header = () => {

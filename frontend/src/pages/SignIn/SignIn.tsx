@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useLoginMutation } from '../../store/api/apiSlice';
-import { useAppDispatch } from '../../hooks/useRedux';
-import { setCredentials } from '../../store/slices/authSlice';
+import { useLoginMutation } from '@/store/api/apiSlice';
+import { useAppDispatch } from '@/hooks/useRedux';
+import { setCredentials } from '@/store/slices/authSlice';
 import './SignIn.css';
 
 const SignIn = () => {
