@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '@/hooks/useRedux';
-import { logoutAndClearUser } from '@/store/slices/authSlice';
+import { logoutAndClearUser } from '@/redux/features/auth/authSlice';
 import logo from '@/assets/argentBankLogo.png';
 import './Header.css';
 

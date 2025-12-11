@@ -8,6 +8,9 @@ A React + TypeScript banking application with Redux Toolkit for state management
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
+- [Getting Started](#getting-started)
+- [Redux & RTK Concepts Cheatsheet](#redux--rtk-concepts-cheatsheet)
+- [Adding Redux Toolkit from Scratch](#adding-redux-toolkit-from-scratch)
 - [Adding Redux Toolkit from Scratch](#adding-redux-toolkit-from-scratch)
   - [Step 0: Create a Vite + React + TypeScript Project](#step-0-create-a-vite--react--typescript-project)
   - [Step 1: Install Redux Dependencies](#step-1-install-redux-dependencies)
@@ -72,6 +75,38 @@ npm install
 # Start development server
 npm run dev
 ```
+
+---
+
+## Redux & RTK Concepts Cheatsheet
+
+### Core Redux Concepts
+
+| Concept | Description |
+|---------|-------------|
+| **Store** | The single source of truth that holds the entire state of your application. You only have one store per app. |
+| **Action** | A plain object that describes *what happened* in the application. It must have a `type` property (e.g., `{ type: 'counter/increment' }`) and optional `payload`. |
+| **Reducer** | A pure function that takes the current **state** and an **action**, and returns a **new state**. It defines *how* the state changes in response to an action. <br>Formula: `(state, action) => newState` |
+| **Dispatch** | The only way to update the state. You "dispatch" an action to the store to trigger a state change. |
+| **Selector** | A function used to extract or "select" specific pieces of data from the store state. |
+
+### Redux Toolkit (RTK)
+
+Modern Redux development uses Redux Toolkit to simplify logic.
+
+| Concept | Description |
+|---------|-------------|
+| **Slice** | A collection of Redux logic for a single feature. It groups the initial state, reducers, and actions together in one file. |
+| **createSlice** | The main API function that generates action creators and action types for you, based on the reducers you define. |
+
+### RTK Query
+
+A powerful data fetching and caching tool included in Redux Toolkit.
+
+| Concept | Description |
+|---------|-------------|
+| **Query** | Used for **reading** data from the server (e.g., GET requests). RTK Query automatically caches the result. |
+| **Mutation** | Used for **changing** data on the server (e.g., POST, PUT, DELETE requests) or invalidating the cache. |
 
 ---
 
